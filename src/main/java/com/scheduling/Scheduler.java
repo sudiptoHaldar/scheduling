@@ -29,31 +29,31 @@ public class Scheduler {
     System.out.println("teacherSchedules: \t\t"+teacherSchedules);
     
     //filter teacherSchedule
-    //teacherSchedules = SchedulingUtility.createFilteredTeacherAvailabilities(studentSchedule, teacherSchedules);
-    //System.out.println("filtered teacherSchedules: \t"+teacherSchedules);
+    teacherSchedules = SchedulingUtility.createFilteredTeacherAvailabilities(studentSchedule, teacherSchedules);
+    System.out.println("filtered teacherSchedules: \t"+teacherSchedules);
     
     //Convert baseList to availabilityList
-    //List<List<Integer>> teacherAvailabilities = ConversionUtility.convertToAvailabilityLists(teacherSchedules);
-    //System.out.println("teacherAvailabilities: "+teacherAvailabilities);
+    List<List<Integer>> teacherAvailabilities = ConversionUtility.convertToAvailabilityLists(teacherSchedules);
+    System.out.println("teacherAvailabilities: \t\t"+teacherAvailabilities);
     
     //create combos
-    //List<List<Integer>> scheduleCombos = SchedulingUtility.getAllCombinations(teacherAvailabilities);
-    //System.out.println("scheduleCombos: "+scheduleCombos);
+    List<List<Integer>> scheduleCombos = SchedulingUtility.getAllCombinations(teacherAvailabilities);
+    System.out.println("scheduleCombos: "+scheduleCombos);
     
     //prune to have unique combos
-    //scheduleCombos = SchedulingUtility.getPrunedList(scheduleCombos);
-    //System.out.println("scheduleCombos pruned: "+scheduleCombos);
+    scheduleCombos = SchedulingUtility.getPrunedList(scheduleCombos);
+    System.out.println("scheduleCombos pruned: "+scheduleCombos);
     
     //createScheduleLists
-    //List<List<List<Integer>>> proposedSchedules = SchedulingUtility.createScheduleLists(origSchedule, scheduleCombos);
-    //System.out.println("proposedSchedules: \t\t"+proposedSchedules);
+    List<List<List<Integer>>> proposedSchedules = SchedulingUtility.createScheduleLists(origSchedule, scheduleCombos);
+    System.out.println("proposedSchedules: \t\t"+proposedSchedules);
     
     //sort based on cost
-    //Collections.sort(proposedSchedules, new AggregateCostComparator());
-    //System.out.println("proposedSchedules sorted: \t"+proposedSchedules); 
+    Collections.sort(proposedSchedules, new AggregateCostComparator());
+    System.out.println("proposedSchedules sorted: \t"+proposedSchedules); 
     
     //propose scheduling options
-    //System.out.println("proposedSchedules View: \n"+PrintUtility.getSchedulesStr(proposedSchedules,-1));  
+    System.out.println("proposedSchedules View: \n"+PrintUtility.getSchedulesStr(proposedSchedules));  
     
     //sort
     

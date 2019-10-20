@@ -34,11 +34,11 @@ public class SchedulerTest {
     teacherSchedule_02.set(5, 1);
     // 0,0,0,0,0,1
     teacherSchedule.add(teacherSchedule_02);
-/*    List<Integer> teacherSchedule_03 = SchedulingUtility.getEmptyBaseList();
+    List<Integer> teacherSchedule_03 = SchedulingUtility.getEmptyBaseList();
     teacherSchedule_03 = SchedulingUtility.getEmptyBaseList();
     teacherSchedule_03.set(2, 1);
     // 0,0,1,0,0,0
-    teacherSchedule.add(teacherSchedule_03);*/
+    teacherSchedule.add(teacherSchedule_03);
     return teacherSchedule;
   }
 
